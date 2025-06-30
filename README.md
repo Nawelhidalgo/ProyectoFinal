@@ -128,7 +128,30 @@ Este archivo contiene rutas relacionadas con las plantas del usuario:
   
   .Soporta ordenamiento por fecha de creación a través del parámetro `orden` (`fecha_desc` o `fecha_asc`).
 
+ # routes/detalle.py
 
+   Rutas para obtener detalles completos de una planta y registrar comentarios:
+
+-  **@detalle_bp.route('/planta/<id_planta>', methods=['GET'])**
+     .Devuelve nombre, foto y descripción.
+
+-   .**@detalle_bp.route('/ciclo/<id_planta>', methods=['GET'])** 
+     .Devuelve el ciclo de vida (etapas) de la planta.
+
+-   .**@detalle_bp.route('/cuidados/<idPlanta>')**
+     .Devuelve los cuidados necesarios.
+
+-   .**@detalle_bp.route('/comentariousuario', methods=['POST'])**
+     .Permite registrar un comentario con texto, foto y riego. Se guarda en ComentarioUsuario.
+
+  # routes/galeria.py
+
+   .Ruta para obtener el historial de comentarios del usuario:
+
+-   **@galeria_bp.route('/comentarios', methods=['GET'])**
+     .Devuelve todos los comentarios del usuario autenticado, con fecha, foto, tipo de planta y texto.
+
+/comentariousuario – Permite registrar un comentario con texto, foto y riego. Se guarda en ComentarioUsuario.
 
 # JavaScript
 
@@ -229,6 +252,22 @@ Este archivo contiene rutas relacionadas con las plantas del usuario:
 
    .Si falla, muestra alertas de error o fallo de red.
 
+ - **detalle.js** 
+
+   .Carga los datos de la planta seleccionada (foto, descripción, cuidados, etapas del ciclo de vida).
+
+   .Permite al usuario escribir comentarios, subir una imagen y registrar el riego (💧).
+
+   .Envía el comentario al backend usando FormData.
+
+ - **galeria.js**
+
+   .Carga todos los comentarios del usuario desde /api/galeria/comentarios.
+
+   .Permite filtrar por tipo de planta y por orden de fecha (reciente o antiguo).
+
+   .Renderiza cada comentario con su imagen, nombre de planta, fecha y texto
+
 # 🔐 Seguridad
 
  - Las contraseñas de los usuarios se encriptan usando `bcrypt` antes de guardarse en la base de datos. Esto asegura que no se almacenan en texto plano y no puedan ser leídas ni por el administrador de la base.
@@ -258,6 +297,5 @@ Este archivo contiene rutas relacionadas con las plantas del usuario:
  . db_lotus_createTable.sql: crea todas las tablas necesarias.
 
  . db_lotus_insert.sql: agrega datos base (plantas, etc.).
- .
 
  . DER.png: muestra el modelo Entidad-Relación de toda la estructura.

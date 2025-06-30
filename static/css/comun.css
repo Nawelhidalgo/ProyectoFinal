@@ -1,0 +1,85 @@
+#Logo{
+    display: flex;
+    align-items: center;        
+    justify-content: center;
+    margin-left: 15px;    
+}
+
+
+#Logo img{
+    width: 80px;
+    height: 80px;
+}
+
+#Logo a{
+    width: 80px;
+    height: 80px;
+}
+
+#Logo p:first-child {
+    margin-right: 5px;
+    font-size: 23px;
+    color: #735C49;
+    font-weight: bold; 
+}
+
+#Logo p:last-child {
+    margin-left: 5px; 
+    font-size: 23px;
+    color: #735C49;
+    font-weight: bold; 
+}
+
+#UserInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #735C49;
+    font-size: 15px;
+    white-space: nowrap; 
+    max-width: 200px;    
+    overflow: hidden;    
+    text-overflow: ellipsis; 
+}
+
+#Usuario {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #FFB6C5;
+    overflow: hidden;
+    flex-shrink: 0;
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Usuario img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-logout {
+    display: none;
+    position: absolute;
+    top: 65px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    z-index: 100;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: #735C49;
+    user-select: none;
+    cursor: pointer;
+}
+
+.menu-logout:hover {
+    background-color: #f0f0f0;
+}

@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    overflow-y: auto;
+    margin: 0px;
+    background-color: #C3E6B8;
+}
+
+header{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(to right, #EFE9C9, #E6F0D6);
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: -100px;
+} 
+
+main {
+  font-family: 'Fredoka', sans-serif;
+  flex: 1;
+  padding: 1rem 2rem;
+  max-width: 900px;
+  margin: 100px auto 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filtros {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filtro label {
+  margin-right: 5px;
+  font-weight: 500;
+  color: #735C49;
+}
+
+.filtro select {
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: 1.5px solid #FFB6C5;
+  background-color: #ffe6eb;
+  color:#735C49 ;
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+}
+
+.filtro select:hover,
+.filtro select:focus {
+  border-color: #ff85a1;
+  outline: none;
+  background-color: #ffd5dc;
+}
+
+select, input[type="date"] {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1.5px solid #FFD6E0;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #5C4B3B;
+  outline-offset: 2px;
+  outline-color: #AED9A0;
+  cursor: pointer;
+}
+
+select:focus, input[type="date"]:focus {
+  outline-color: #AED9A0;
+  box-shadow: 0 0 5px rgba(173, 215, 160, 0.5);
+}
+
+
+.registro {
+  background: #F5EEDC;
+  border: 2px solid #FFB6C5;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+}
+
+.registro img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #AED9A0;
+}
+
+.registro-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.registro-info .fecha {
+  font-size: 0.85rem;
+  color: #7A6A59;
+  font-weight: 600;
+}
+
+.registro-info .comentario {
+  font-size: 1rem;
+  color: #5C4B3B;
+}
+
+.registro-info .tipo-planta {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #A05A71;
+}
+

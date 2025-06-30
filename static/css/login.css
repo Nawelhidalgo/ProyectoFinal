@@ -1,0 +1,134 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAF7F0;
+  color: #5C4B3B;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #AED9A0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0rem 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #735C49;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#Logo{
+    display: flex;
+    align-items: center;        
+    justify-content: center;
+    margin-right: 10px;  
+}
+
+#Logo img{
+    width: 80px;
+    height: 80px;
+}
+
+#Logo a{
+    width: 80px;
+    height: 80px;
+}
+
+#Logo p:first-child {
+    margin-right: 5px;
+    font-size: 23px;
+    color: #735C49;
+    font-weight: bold; 
+}
+
+#Logo p:last-child {
+    margin-left: 5px; 
+    font-size: 23px;
+    color: #735C49;
+    font-weight: bold; 
+}
+
+main {
+    font-family: 'Segoe UI', sans-serif;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-box * {
+  box-sizing: border-box;
+}
+
+.login-box {
+  background-color: #F5EEDC;
+  border: 2px solid #FFB6C5;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  margin-right: 15px;
+  text-align: center;
+  color: #735C49;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #5C4B3B;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1.5px solid #FFD6E0;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #5C4B3B;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #AED9A0;
+  box-shadow: 0 0 5px rgba(173, 215, 160, 0.5);
+}
+
+.login-boton {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #AED9A0;
+  color: #735C49;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-boton:hover {
+  background-color: #C3E6B8;
+}
+
+.registrar-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.registrar-link a {
+  color: #735C49;
+  text-decoration: underline;
+}

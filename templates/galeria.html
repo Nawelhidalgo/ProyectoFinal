@@ -1,0 +1,49 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Historial de Seguimiento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../static/css/comun.css">
+  <link rel="stylesheet" href="../static/css/galeria.css" />
+</head>
+<body>
+ <header>
+    <div id="Logo">
+      <p>Naby</p>
+      <a href="/home">
+        <img src="../static/Imagenes/img_nabyLotus/lotodelnahue2.png" alt="">
+      </a>
+      <p>Lotus</p>
+    </div>
+
+    <div class="filtros">
+      <div class="filtro">
+        <label for="tipoPlanta">Tipo de Planta:</label>
+        <select id="tipoPlanta" name="tipoPlanta"></select>
+      </div>
+      <div class="filtro">
+        <label for="ordenFecha">Ordenar por Fecha:</label>
+        <select id="ordenFecha" name="ordenFecha"></select>
+       </div>
+    </div>
+
+    <div id="UserInfo">
+        <div id="Usuario">
+             <img id="foto-usuario" src="" alt="Foto de perfil" />
+             <div id="menu-logout" class="menu-logout">Cerrar sesión</div>
+        </div>  
+        <div id="nombre-usuario" class="NombreUsuario"></div>
+    </div>
+  </header>
+  <main>
+    <section id="comentariosUsuarios"> 
+      <div id="registros">
+     </div>
+    </section>
+   
+  </main>
+  <script src="../static/js/infoUsuario.js"></script>
+  <script src="../static/js/galeria.js"></script>
+</body>
+</html>

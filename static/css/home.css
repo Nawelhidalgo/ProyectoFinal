@@ -1,0 +1,248 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    overflow-y: auto;
+    margin: 0px;
+    background-color: #C3E6B8;
+}
+
+header{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(to right, #EFE9C9, #E6F0D6);
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-family: 'Quicksand', sans-serif;
+
+}   
+
+#Acciones{
+    align-items: center;        
+    justify-content: center;
+    margin:0px 0 0 0px;
+    display: flex;
+
+}
+
+#Acciones p{
+    font-size: 17px;
+    color: #735C49;
+}
+
+
+.agregarPlanta {
+  margin-top: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.agregarPlanta img {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  transition: transform 0.2s;
+}
+
+.agregarPlanta img:hover {
+  transform: scale(1.1);
+}
+
+.popup-form {
+  display: none; 
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  background-color: #fff;
+  border: 2px solid #FFB6C5;
+  border-radius: 15px;
+  padding: 15px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 20;
+}
+
+.popup-form h3 {
+  margin-top: 0;
+  color: #FFB6C5;
+}
+
+.popup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-form input[type="text"],
+.popup-form select,
+.popup-form input[type="file"] {
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn-guardar {
+  background-color: #FFB6C5;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-guardar:hover {
+  background-color: #ff94a7;
+}
+.galeria{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 100px
+}
+.galeria p{
+    font-size: 17px;
+    color: #735C49;
+    margin: 0;
+    padding: 0;
+}
+
+.filtrador{
+    display: flex;
+    margin-left: 100px;
+    font-size: 1rem;
+    color: #735C49;
+    gap: 7px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filtro label {
+  margin-right: 5px;
+  font-weight: 500;
+  color: #735C49;
+}
+
+
+.filtrador select {
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: 1.5px solid #FFB6C5;
+  background-color: #ffe6eb;
+  color:#735C49 ;
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+}
+.filtrador select:hover,
+.filtrador select:focus {
+  border-color: #ff85a1;
+  outline: none;
+  background-color: #ffd5dc;
+}
+
+select{
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1.5px solid #FFD6E0;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #5C4B3B;
+  outline-offset: 2px;
+  outline-color: #AED9A0;
+  cursor: pointer;
+}
+
+select:focus {
+  outline-color: #AED9A0;
+  box-shadow: 0 0 5px rgba(173, 215, 160, 0.5);
+}
+
+main{
+    padding-top: 100px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 900px;
+    margin:0 auto;
+    padding: 0 15px;
+}
+
+section a{
+    display: block;
+    height: 50px;
+    width: 190px;
+    text-decoration: none;
+}
+
+section a:hover {
+    cursor: pointer;
+}
+
+.ContenedorPlantas{
+    height: 60px;
+    width: 190px;
+    background-color: #EFE9C9;
+    border: 5px solid #FFB6C5;
+    border-radius: 30px;
+    box-shadow:  0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    padding: 0 10px; 
+    transition: background-color 0.3s ease, border-color 0.3s ease
+ 
+} 
+
+.ContenedorPlantas:hover {
+    background-color: #e3f0d9;
+    border-color: #a9d18e;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transform: scale(1.03);
+}
+
+.ImagenIngresada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    padding: 10px 15px;
+    overflow: hidden;
+    width: fit-content;  
+ 
+}
+
+.ImagenIngresada img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #FFB6C5;
+    object-fit: cover;
+    margin: 0px;    
+}
+
+.planta{
+    color: #735C49;
+    margin: 15px 0px 0px 8px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+
+    
+}
+
+

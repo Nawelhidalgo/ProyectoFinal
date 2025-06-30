@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAF7F0;
+  color: #5C4B3B;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #AED9A0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0rem 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #735C49;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#Logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+#Logo img {
+  width: 80px;
+  height: 80px;
+}
+
+#Logo p {
+  font-size: 23px;
+  color: #735C49;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+
+main {
+  font-family: 'Segoe UI', sans-serif;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1,2rem;
+}
+
+.formulario-box {
+  background-color: #F5EEDC;
+  border: 2px solid #FFB6C5;
+  border-radius: 12px;
+  padding: 1.2rem 1.8rem; 
+  width: 100%;
+  max-width: 380px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-box h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #735C49;
+  font-weight: 600;
+}
+
+.grupo-formulario {
+  margin-bottom: 0.7rem;
+}
+
+.grupo-formulario label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #5C4B3B;
+  font-weight: 500;
+}
+
+.grupo-formulario input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1.5px solid #FFD6E0;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 0.95rem;
+  color: #5C4B3B;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.grupo-formulario input:focus {
+  outline: none;
+  border-color: #AED9A0;
+  box-shadow: 0 0 5px rgba(173, 215, 160, 0.5);
+}
+
+.boton-crear {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #AED9A0;
+  color: #735C49;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.8rem;
+}
+
+.boton-crear:hover {
+  background-color: #C3E6B8;
+}
+
+.iniciar-sesion-link {
+  margin-top: 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.iniciar-sesion-link a {
+  color: #735C49;
+  text-decoration: underline;
+}
+
+.foto-perfil-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.foto-circular {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px dashed #AED9A0;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+}
+
+.foto-circular:hover {
+  border-color: #C3E6B8;
+}
+
+.foto-circular img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

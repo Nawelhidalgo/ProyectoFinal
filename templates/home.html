@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/comun.css">
+    <link rel="stylesheet" href="../static/css/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Quicksand:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <header>
+    <div id="Logo">
+      <p>Naby</p>
+      <a href="/home">
+        <img
+          src="../static/Imagenes/img_nabyLotus/lotodelnahue2.png"
+          alt="Logo Naby Lotus"
+        />
+      </a>
+      <p>Lotus</p>
+    </div>
+    <div id="Acciones">
+      <div class="agregarPlanta">
+        <img
+          src="../static/Imagenes/img_nabyLotus/cosodelmasdelnahue.png"
+          alt=""
+          id="btnAgregarPlanta"
+        />
+        <div class="popup-form" id="formAgregarPlanta">
+          <h3>Agregar Nueva Planta</h3>
+          <form>
+            <label for="foto">Foto:</label>
+            <input type="file" id="foto" name="foto" accept="image/*" required />
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="tipo">Tipo de planta:</label>
+            <select id="tipo" name="tipo"></select>
+
+            <button type="submit" class="btn-guardar">Guardar</button>
+          </form>
+        </div>
+      </div>
+      <p>Nueva planta</p>
+      <a href="/galeria" class="galeria">
+        <p>[ ] Mi galeria</p>
+      </a>
+      <div class="filtrador">
+    Ordenar por fecha:
+    <select name="mi_select" id="mi_select">
+        <option value="fecha_desc">Más nuevo</option>
+        <option value="fecha_asc">Más antiguo</option>
+    </select>
+</div>
+    </div>
+     
+    <div id="UserInfo">
+      <div id="Usuario">
+        <img id="foto-usuario" src="" alt="Foto de perfil" />
+        <div id="menu-logout" class="menu-logout">Cerrar sesión</div>
+      </div>
+      <div id="nombre-usuario" class="NombreUsuario"></div>
+    </div>
+  </header>
+  <main>
+    <section id="Plantas">
+      
+    </section>
+  </main>
+  <script src="../static/js/infoUsuario.js"></script>
+  <script src="../static/js/home.js"></script>
+</body>
+</html>

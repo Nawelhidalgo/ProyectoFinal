@@ -1,0 +1,305 @@
+ *, *::before, *::after {
+      box-sizing: border-box;
+}
+
+body {
+      margin: 0;
+      background-color: #c3e6b8;
+      font-family: 'Fredoka', sans-serif;
+      overflow-y: auto;
+      min-height: 100vh;
+}
+
+header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      padding: 1rem 2rem;
+      background: linear-gradient(to right, #efe9c9, #e6f0d6);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      font-family: 'Quicksand', sans-serif;
+}
+
+main {
+      overflow: hidden;
+      padding: 100px 1rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      font-family: 'Fredoka', cursive;
+}
+.carrusel {
+  width: 351px;
+  height: 301px;
+  border: 2px solid #ffb6c1;
+  overflow: hidden;
+}
+
+.carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.introduccion {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 3rem;
+}
+
+
+.descripcion {
+      flex: 1 1 500px;
+      background-color: #fff0f5;
+      border: 2px solid #ffb6c1;
+      border-radius: 10px;
+      padding: 1.5rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #5a1a3d;
+      min-width: 280px;
+}
+
+.cicloVida {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 0 8px rgba(200, 100, 150, 0.1);
+      max-width: 100%;
+      margin: 2rem auto;
+      overflow-x: auto;
+}
+
+.cicloVida h1 {
+      text-align: center;
+      color: #d36fa8;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+}
+
+table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+}
+
+thead th {
+      background-color: #ffe6f0;
+      color: #b34082;
+      padding: 12px;
+      border: 1px solid #f5c4db;
+      text-align: left;
+      font-weight: 700;
+}
+
+tbody td {
+      padding: 12px;
+      border: 1px solid #f7d0e3;
+      vertical-align: top;
+      color: #5a1a3d;
+}
+
+tbody tr:nth-child(even) {
+      background-color: #fff3f8;
+}
+
+tbody td:first-child {
+      font-weight: 700;
+      color: #b34082;
+}
+
+.diarioCultivo {
+      display: grid;
+      grid-template-columns: 1fr 120px;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "comentario riego"
+        "botones riego";
+      gap: 20px;
+      max-width: 1000px;
+      margin: 2rem auto;
+      font-family: 'Comic Sans MS', cursive;
+}
+
+.comentarioUsuario {
+      grid-area: comentario;
+      background-color: #efe9c9;
+      border-radius: 20px;
+      padding: 15px;
+      border: 5px solid #ffb6c5;
+}
+
+.comentarioUsuario textarea {
+      width: 100%;
+      height: 100px;
+      resize: none;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1rem;
+      font-family: 'Fredoka', cursive;
+      color: #333;
+}
+
+.comentarioUsuario img {
+      max-width: 150px;
+      margin-top: 10px;
+      border-radius: 10px;
+      display: block;
+}
+
+.riego {
+      grid-area: riego;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      margin-top: -50px;
+}
+
+.boton-riego {
+      font-size: 1.5rem;
+      background-color: #efe9c9;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 5px solid #ffb6c5;
+      cursor: pointer;
+      margin: 5px 0;
+      transition: background-color 0.3s ease;
+}
+
+.boton-riego:hover {
+      background-color: #ffd3dc;
+}
+
+.ultimo-riego {
+      font-size: 0.75rem;
+      background-color: #efe9c9;
+      padding: 2px 6px;
+      border: 5px solid #ffb6c5;
+      border-radius: 5px;
+      color: #735c49;
+      margin-top: 5px;
+      user-select: none;
+}
+
+.guardarComentario-Seleccionarfoto {
+      grid-area: botones;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+}
+
+.guardar-comentario .guardar {
+      background-color: #f8a2b0;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: white;
+      transition: background-color 0.3s ease;
+      font-family: 'Fredoka', cursive;
+}
+
+.guardar-comentario .guardar:hover {
+      background-color: #ff6b88;
+}
+.seleccionFoto {
+  background-color: #f8a2b0;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  font-family: 'Fredoka', cursive;
+  transition: background-color 0.3s ease;
+}
+
+.seleccionFoto:hover {
+  background-color: #ff6b88;
+}
+
+
+@media (max-width: 768px) {
+      .introduccion {
+        flex-direction: column;
+}
+.carrusel {
+        max-width: 100%;
+        height: 250px;
+}
+.carrusel-imagenes {
+        width: calc(250px * 4);
+}
+.carrusel-imagenes img {
+        width: 250px;
+        height: 250px;
+}
+.descripcion {
+        min-width: auto;
+        font-size: 1rem;
+}
+.diarioCultivo {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "comentario"
+          "botones"
+          "riego";
+}
+.riego {
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+}
+}
+
+.guia-cuidados {
+    background-color: #fff0f5;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    color: #5a1a3d;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-family: 'Fredoka', cursive;
+    box-shadow: 0 0 8px rgba(200, 100, 150, 0.1);
+}
+
+.guia-cuidados h1 {
+    text-align: center;
+    color: #d36fa8;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.guia-cuidados ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.guia-cuidados li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.4em;
+}
+
+.guia-cuidados li::before {
+    content: "🌱";
+    position: absolute;
+    left: 0;
+}

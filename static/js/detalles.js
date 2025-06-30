@@ -1,4 +1,3 @@
-
 let idPlanta = null;
 let ultimoRiegoFecha = null;
 let comentarioRiegoAgregado = false;

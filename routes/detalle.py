@@ -76,14 +76,12 @@ def comentariousuario():
         extension = os.path.splitext(foto.filename)[1]
         nombre_archivo = f"{uuid.uuid4().hex}{extension}"
 
-        # Usar current_app.root_path para la ruta absoluta
         upload_folder_abs = os.path.join(current_app.root_path, 'static', 'imagenes_comentarios')
         os.makedirs(upload_folder_abs, exist_ok=True)
 
         ruta_foto_absoluta = os.path.join(upload_folder_abs, nombre_archivo)
         foto.save(ruta_foto_absoluta)
 
-        # Esta es la ruta que guardarás en la base para usar como src en HTML
         ruta_foto_relativa = f"/static/imagenes_comentarios/{nombre_archivo}"
 
     try:

@@ -8,6 +8,7 @@ from routes.detalle import detalle_bp
 from flask import Flask, send_from_directory,render_template,redirect
 import os
 from flask_cors import CORS
+from routes.login_admin import admin_bp
 
 
 app = Flask(__name__, static_folder='static')
@@ -56,10 +57,16 @@ def galeria():
         return redirect("/login")
     return render_template("galeria.html")
 
+@app.route("/admin/login")
+def mostrar_login_admin():
+    return render_template('loginAdmin.html')
+
+
 app.register_blueprint(api_usuarios_bp, url_prefix="/api/usuarios")
 app.register_blueprint(home_bp, url_prefix="/api/home")
 app.register_blueprint(detalle_bp, url_prefix='/api/detalles')
 app.register_blueprint(galeria_bp, url_prefix='/api/galeria')
+app.register_blueprint(admin_bp, url_prefix="/api/admin")
 
 if __name__ == "__main__":
     app.run(debug=True)

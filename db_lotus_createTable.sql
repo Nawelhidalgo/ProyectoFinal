@@ -66,24 +66,10 @@ CREATE TABLE ComentarioUsuario (
 );
 
 CREATE TABLE Administrador (
-    IdAdmin int auto_increment not null,
-    mail varchar(500) NOT NULL UNIQUE,
-    Contrasena varchar(500) NOT NULL,
+    IdAdmin INT AUTO_INCREMENT NOT NULL,
+    Nombre VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Contrasena VARCHAR(500) NOT NULL,
     CONSTRAINT pk_admin PRIMARY KEY (IdAdmin)
 );
 
-CREATE TABLE Administrador (
-    IdAdmin INT NOT NULL,
-    Nombre VARCHAR(100) NOT NULL,
-    Email VARCHAR(100) NOT NULL UNIQUE,
-    Contraseña VARCHAR(255) NOT NULL,
-    CONSTRAINT pk_admin PRIMARY KEY (IdAdmin)
-);
-
-CREATE TABLE Administrador (
-    IdAdmin INT NOT NULL,
-    Nombre VARCHAR(100) NOT NULL,
-    Email VARCHAR(100) NOT NULL UNIQUE,
-    Contraseña VARCHAR(255) NOT NULL,
-    CONSTRAINT pk_admin PRIMARY KEY (IdAdmin)
-);

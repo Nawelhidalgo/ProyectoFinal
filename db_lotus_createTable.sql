@@ -71,3 +71,19 @@ CREATE TABLE Administrador (
     Contrasena varchar(500) NOT NULL,
     CONSTRAINT pk_admin PRIMARY KEY (IdAdmin)
 );
+
+CREATE TABLE Administrador (
+    IdAdmin INT NOT NULL,
+    Nombre VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Contraseña VARCHAR(255) NOT NULL,
+    CONSTRAINT pk_admin PRIMARY KEY (IdAdmin)
+);
+
+CREATE TABLE Administrador (
+    IdAdmin INT NOT NULL,
+    Nombre VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Contraseña VARCHAR(255) NOT NULL,
+    CONSTRAINT pk_admin PRIMARY KEY (IdAdmin)
+);

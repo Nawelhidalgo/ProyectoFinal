@@ -61,6 +61,12 @@ def galeria():
 def mostrar_login_admin():
     return render_template('loginAdmin.html')
 
+@app.route("/admin/panel")
+def admin_panel():
+    from flask import session
+    if 'admin_id' not in session:
+        return redirect("/admin/login")
+    return render_template("admin.html")
 
 app.register_blueprint(api_usuarios_bp, url_prefix="/api/usuarios")
 app.register_blueprint(home_bp, url_prefix="/api/home")

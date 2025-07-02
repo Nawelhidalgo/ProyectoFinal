@@ -1,6 +1,7 @@
 from flask import Blueprint, request, session, jsonify, redirect, url_for
 from db.connection import get_db_connection
 from werkzeug.security import check_password_hash
+from routes.funcionesAdmin import obtener_todos_los_usuarios
 
 admin_bp = Blueprint('admin', __name__,)
 
@@ -26,3 +27,10 @@ def login_admin():
 
     session['admin_id'] = admin['IdAdmin']
     return jsonify({"mensaje": "Login exitoso"}), 200
+
+@admin_bp.route('/usuarios', methods=['GET'])
+def listar_usuarios():
+    if 'admin_id' not in session:
+        return redirect('/admin/login')
+    usuarios = obtener_todos_los_usuarios()
+    return jsonify(usuarios)

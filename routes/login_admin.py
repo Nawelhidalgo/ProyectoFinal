@@ -2,6 +2,7 @@ from flask import Blueprint, request, session, jsonify, redirect, url_for
 from db.connection import get_db_connection
 from werkzeug.security import check_password_hash
 from routes.funcionesAdmin import obtener_todos_los_usuarios
+from routes.funcionesAdmin import obtener_plantas
 
 admin_bp = Blueprint('admin', __name__,)
 
@@ -34,3 +35,12 @@ def listar_usuarios():
         return redirect('/admin/login')
     usuarios = obtener_todos_los_usuarios()
     return jsonify(usuarios)
+
+@admin_bp.route('/plantas', methods=['GET'])
+def listar_plantas():
+    try:
+        plantas = obtener_plantas()
+        return jsonify(plantas)
+    except Exception as e:
+        print("Error al obtener plantas:", e)
+        return jsonify({"error": "No se pudieron obtener las plantas"}), 500

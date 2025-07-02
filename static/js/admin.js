@@ -9,6 +9,8 @@ function mostrarSeccion(id) {
 
     if (id === 'usuarios') {
       cargarUsuarios();
+    } else if (id === 'plantas') {
+      cargarPlantas();
     }
   }
 }
@@ -40,5 +42,45 @@ async function cargarUsuarios() {
     });
   } catch (error) {
     console.error('Error al cargar usuarios:', error);
+  }
+}
+
+async function cargarPlantas() {
+  const contenedor = document.getElementById('contenedorPlantas');
+  contenedor.innerHTML = ''; 
+
+  try {
+    const res = await fetch('/admin/plantas');
+    if (!res.ok) throw new Error("Error al obtener plantas");
+
+    const plantas = await res.json();
+
+    plantas.forEach(planta => {
+      const card = document.createElement('div');
+      card.className = 'planta-card';
+
+      const nombre = document.createElement('h3');
+      nombre.textContent = planta.Nombre;
+
+      const botones = document.createElement('div');
+      botones.className = 'botones';
+
+      const btnEditar = document.createElement('button');
+      btnEditar.className = 'btn-editar';
+      btnEditar.textContent = 'Editar';
+
+      const btnDesactivar = document.createElement('button');
+      btnDesactivar.className = 'btn-desactivar';
+      btnDesactivar.textContent = 'Desactivar';
+
+      botones.appendChild(btnEditar);
+      botones.appendChild(btnDesactivar);
+
+      card.appendChild(nombre);
+      card.appendChild(botones);
+      contenedor.appendChild(card);
+    });
+  } catch (error) {
+    console.error('Error al cargar plantas:', error);
   }
 }

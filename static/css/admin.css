@@ -138,3 +138,40 @@ h2 {
 .btn-desactivar:hover {
   background-color: #f5c2c7;
 }
+
+.usuarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.usuario-card {
+  background-color: #fffdf8;
+  border: 1px solid #e0dcd0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.usuario-card:hover {
+  transform: scale(1.02);
+}
+
+.usuario-card img {
+  width: 100%;
+  max-width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd0ba;
+  margin-bottom: 10px;
+}
+
+.usuario-card h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #5c4d3b;
+}

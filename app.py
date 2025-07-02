@@ -66,7 +66,7 @@ app.register_blueprint(api_usuarios_bp, url_prefix="/api/usuarios")
 app.register_blueprint(home_bp, url_prefix="/api/home")
 app.register_blueprint(detalle_bp, url_prefix='/api/detalles')
 app.register_blueprint(galeria_bp, url_prefix='/api/galeria')
-app.register_blueprint(admin_bp, url_prefix="/api/admin")
+app.register_blueprint(admin_bp, url_prefix="/admin")
 
 if __name__ == "__main__":
     app.run(debug=True)

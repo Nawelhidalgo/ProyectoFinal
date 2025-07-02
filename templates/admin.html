@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel de Administrador</title>
+  <link rel="stylesheet" href="../static/css/admin.css">
+</head>
+<body>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Admin</h2>
+      <ul>
+        <li onclick="mostrarSeccion('plantas')">🌱 Plantas</li>
+        <li onclick="mostrarSeccion('usuarios')">👤 Usuarios</li>
+        <li onclick="mostrarSeccion('comentarios')">💬 Comentarios</li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section id="plantas" class="seccionAdmin visible">
+        <h2>Gestión de Plantas</h2>
+        <div class="plantas-grid" id="contenedorPlantas">
+        <div class="planta-card">
+          <h3>Nombre Planta</h3>
+          <div class="botones">
+             <button class="btn-editar">Editar</button>
+             <button class="btn-desactivar">Desactivar</button>
+          </div>
+        </div>
+        <div class="planta-card">
+          <h3>Nombre Planta</h3>
+          <div class="botones">
+             <button class="btn-editar">Editar</button>
+             <button class="btn-desactivar">Desactivar</button>
+          </div>
+        </div>
+        <div class="planta-card">
+          <h3>Nombre Planta</h3>
+          <div class="botones">
+             <button class="btn-editar">Editar</button>
+             <button class="btn-desactivar">Desactivar</button>
+          </div>
+        </div>
+        <div class="planta-card">
+          <h3>Nombre Planta</h3>
+          <div class="botones">
+             <button class="btn-editar">Editar</button>
+             <button class="btn-desactivar">Desactivar</button>
+          </div>
+        </div>
+        <div class="planta-card">
+          <h3>Nombre Planta</h3>
+          <div class="botones">
+             <button class="btn-editar">Editar</button>
+             <button class="btn-desactivar">Desactivar</button>
+          </div>
+        </div>
+        <div class="planta-card">
+          <h3>Nombre Planta</h3>
+          <div class="botones">
+             <button class="btn-editar">Editar</button>
+             <button class="btn-desactivar">Desactivar</button>
+          </div>
+        </div>
+    </section>
+
+      <section id="usuarios" class="seccionAdmin">
+        <h2>Usuarios Registrados</h2>
+        <p>Listado de usuarios registrados (solo lectura).</p>
+      </section>
+
+      <section id="comentarios" class="seccionAdmin">
+        <h2>Comentarios de Usuarios</h2>
+        <p>Visualización de todos los comentarios asociados a las plantas y usuarios.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../static/js/admin.js"></script>
+</body>
+</html>

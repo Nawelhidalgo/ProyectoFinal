@@ -49,43 +49,71 @@ async function cargarUsuarios() {
 
 async function cargarPlantas() {
   const contenedor = document.getElementById('contenedorPlantas');
-  contenedor.innerHTML = ''; 
+  contenedor.innerHTML = '';
 
   try {
     const res = await fetch('/admin/plantas');
     if (!res.ok) throw new Error("Error al obtener plantas");
-
     const plantas = await res.json();
-
     plantas.forEach(planta => {
       const card = document.createElement('div');
       card.className = 'planta-card';
-
       const nombre = document.createElement('h3');
       nombre.textContent = planta.Nombre;
-
       const botones = document.createElement('div');
       botones.className = 'botones';
-
       const btnEditar = document.createElement('button');
       btnEditar.className = 'btn-editar';
       btnEditar.textContent = 'Editar';
-
-      const btnDesactivar = document.createElement('button');
-      btnDesactivar.className = 'btn-desactivar';
-      btnDesactivar.textContent = 'Desactivar';
-
+      const btnEstado = document.createElement('button');
+      if (planta.Activo === 1) {
+        btnEstado.className = 'btn-desactivar';
+        btnEstado.textContent = 'Desactivar';
+      } else {
+        btnEstado.className = 'btn-activar';
+        btnEstado.textContent = 'Activar';
+      }
       botones.appendChild(btnEditar);
-      botones.appendChild(btnDesactivar);
-
+      botones.appendChild(btnEstado);
       card.appendChild(nombre);
       card.appendChild(botones);
       contenedor.appendChild(card);
+      btnEditar.addEventListener('click', () => {
+      });
+
+      btnEstado.addEventListener('click', async () => {
+        const accion = planta.Activo === 1 ? 'desactivar' : 'activar';
+        const confirmar = confirm(`¿Querés ${accion} la planta "${planta.Nombre}"?`);
+        if (!confirmar) return;
+
+        try {
+          const url = accion === 'desactivar' ? '/admin/desactivar_planta' : '/admin/activar_planta';
+          const res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ IdPlanta: planta.IdPlanta })
+          });
+
+          const data = await res.json();
+          if (res.ok && data.success) {
+            alert(`Planta ${accion}da correctamente.`);
+            cargarPlantas(); 
+          } else {
+            alert(`Error al ${accion} la planta.`);
+          }
+        } catch (error) {
+          console.error('Error en la solicitud:', error);
+          alert('Error en la solicitud.');
+        }
+      });
+
     });
+
   } catch (error) {
     console.error('Error al cargar plantas:', error);
   }
 }
+
 
 async function cargarUsuariosComentarios() {
   const contenedor = document.getElementById('contenedorUsuariosComentarios');

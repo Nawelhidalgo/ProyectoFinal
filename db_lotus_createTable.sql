@@ -59,7 +59,7 @@ CREATE TABLE PlantaUsuarios (
 CREATE TABLE ComentarioUsuario (
     IdPlanta CHAR(5),
     IdUsuario INT,
-    Fecha DATETIME NOT NULL,
+    Fecha DATE NOT NULL,
     Foto VARCHAR(400) NULL,
     Texto VARCHAR(603) NOT NULL,
     CONSTRAINT pk_Comentario PRIMARY KEY (IdPlanta, IdUsuario, Fecha),

@@ -3,6 +3,7 @@ from db.connection import get_db_connection
 from werkzeug.security import check_password_hash
 from routes.funcionesAdmin import obtener_todos_los_usuarios
 from routes.funcionesAdmin import obtener_plantas
+from routes.funcionesAdmin import obtener_comentarios_por_usuario
 
 admin_bp = Blueprint('admin', __name__,)
 
@@ -44,3 +45,11 @@ def listar_plantas():
     except Exception as e:
         print("Error al obtener plantas:", e)
         return jsonify({"error": "No se pudieron obtener las plantas"}), 500
+
+@admin_bp.route('/comentarios_usuario/<int:id_usuario>', methods=['GET'])
+def comentarios_usuario(id_usuario):
+    try:
+        comentarios = obtener_comentarios_por_usuario(id_usuario)
+        return jsonify(comentarios), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500

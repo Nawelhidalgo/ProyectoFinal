@@ -16,3 +16,18 @@ def obtener_plantas():
     cursor.close()
     conn.close()
     return plantas
+
+def obtener_comentarios_por_usuario(id_usuario):
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute("""
+        SELECT cu.Foto, cu.Texto AS comentario, cu.Fecha, p.Nombre
+        FROM ComentarioUsuario cu
+        JOIN Plantas p ON cu.IdPlanta = p.IdPlanta
+        WHERE cu.IdUsuario = %s
+        ORDER BY cu.Fecha DESC
+    """, (id_usuario,))
+    comentarios = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return comentarios

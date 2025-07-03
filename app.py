@@ -5,7 +5,7 @@ from routes.api_usuarios import api_usuarios_bp
 from routes.galeria import galeria_bp
 from routes.home import home_bp
 from routes.detalle import detalle_bp
-from flask import Flask, send_from_directory,render_template,redirect
+from flask import Flask,render_template,redirect
 import os
 from flask_cors import CORS
 from routes.login_admin import admin_bp

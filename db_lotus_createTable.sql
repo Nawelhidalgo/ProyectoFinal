@@ -29,6 +29,7 @@ CREATE TABLE Plantas (
     Mantenimiento VARCHAR(400) NOT NULL,
     Conservacion VARCHAR(400) NOT NULL,
     Semillas VARCHAR(400) NOT NULL,
+    Activo TINYINT(1) NOT NULL DEFAULT 1,
     CONSTRAINT pk_planta PRIMARY KEY (IdPlanta)
 );
 
@@ -49,6 +50,7 @@ CREATE TABLE PlantaUsuarios (
     Foto VARCHAR(400) NOT NULL,
     Nombre VARCHAR(20) NOT NULL,
     FechaCreacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    Activo TINYINT(1) NOT NULL DEFAULT 1,
     CONSTRAINT pk_PlantaUsuario PRIMARY KEY (IdPlanta, IdUsuario),
     CONSTRAINT fk_PlantaUsuario_Planta FOREIGN KEY (IdPlanta) REFERENCES Plantas (IdPlanta),
     CONSTRAINT fk_PlantaUsuario_Usuario FOREIGN KEY (IdUsuario) REFERENCES Usuarios (IdUsuario)

@@ -12,7 +12,7 @@ UPLOAD_SUBFOLDER = 'Imagenes/img_PlantasUsuario'
 def obtener_plantas():
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
-    cursor.execute("SELECT IdPlanta, Nombre FROM Plantas")
+    cursor.execute("SELECT IdPlanta, Nombre FROM Plantas WHERE Activo = 1")
     plantas = cursor.fetchall()
     cursor.close()
     conn.close()

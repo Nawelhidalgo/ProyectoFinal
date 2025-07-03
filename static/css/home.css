@@ -116,6 +116,10 @@ header{
     margin: 0;
     padding: 0;
 }
+.galeria img{
+  height: 60px;
+  width: 60px;
+}
 
 .filtrador{
     display: flex;
@@ -192,24 +196,23 @@ section a:hover {
     cursor: pointer;
 }
 
-.ContenedorPlantas{
+.ContenedorPlantas {
     height: 60px;
     width: 190px;
     background-color: #EFE9C9;
     border: 5px solid #FFB6C5;
     border-radius: 30px;
-    box-shadow:  0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex; 
-    padding: 0 10px; 
-    transition: background-color 0.3s ease, border-color 0.3s ease
- 
-} 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
 
 .ContenedorPlantas:hover {
     background-color: #e3f0d9;
     border-color: #a9d18e;
     cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
     transform: scale(1.03);
 }
 
@@ -217,11 +220,11 @@ section a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 40px;
-    padding: 10px 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     overflow: hidden;
-    width: fit-content;  
- 
+    flex-shrink: 0;
 }
 
 .ImagenIngresada img {
@@ -230,19 +233,17 @@ section a:hover {
     border-radius: 50%;
     border: 4px solid #FFB6C5;
     object-fit: cover;
-    margin: 0px;    
 }
 
-.planta{
+.planta {
     color: #735C49;
-    margin: 15px 0px 0px 8px;
+    margin-left: 10px; 
     font-family: 'Fredoka', sans-serif;
     font-weight: 600;
-    line-height: 1.3;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 0.5px;
-
-    
+    white-space: nowrap;
 }
+
 
 

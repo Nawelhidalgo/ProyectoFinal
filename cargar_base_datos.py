@@ -27,7 +27,7 @@ def ejecutar_sql_desde_archivo(archivo_sql, conexion):
 def main():
     config = {
         'user': 'root',
-        'password': 'pagola1942', 
+        'password': 'nombre_contraseña', 
         'host': 'localhost',
     }
 

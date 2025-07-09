@@ -1,5 +1,5 @@
 
-insert into etapas (IdEtapa,NombreEtapa)
+insert into Etapas (IdEtapa,NombreEtapa)
 values('123','Reposo'),
       ('124','Siembra'),
       ('125','Germinación'),
